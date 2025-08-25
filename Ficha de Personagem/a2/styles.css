@@ -267,6 +267,7 @@ body {
     height: 1.25rem;
     width: 100%;
     transition: width 0.5s ease-in-out;
+    justify-self: flex-end;
 }
 .mana-bar {
     background-color: var(--mana-color);
@@ -409,6 +410,26 @@ body {
 }
 .card.compact-profile .xp-numbers {
     margin-top: 0;
+    display: flex;
+}
+#xp-current-side, #xp-max-side {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px; /* Ajusta este valor conforme a tua preferência */
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#xp-current-side.bg-slate-700, #xp-max-side.bg-slate-700 {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+#xp-current-side, #xp-max-side, #xp-numbers-side .text-xs {
+    bottom: -5px;
+    position: relative;
+}
+#xp-numbers-side .editable {
+    min-height: 1.3rem;
 }
 .card.compact-profile .xp-bar-wrapper {
     display: flex;
